@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace Api_Web.Controllers
 {
-    //The controller is a reserved word
     /// <summary>
-    /// 
+    /// The controller is a reserved word 
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
