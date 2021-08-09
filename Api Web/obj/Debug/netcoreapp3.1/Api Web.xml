@@ -6,7 +6,7 @@
     <members>
         <member name="T:Api_Web.Controllers.UserController">
             <summary>
-            
+            The controller is a reserved word 
             </summary>
         </member>
         <member name="F:Api_Web.Controllers.UserController._iUser">
@@ -26,6 +26,11 @@
             </summary>
             <param name="userToAdd"></param>
             <returns></returns>
+        </member>
+        <member name="M:Api_Web.Controllers.UserController.Update(Api_Web.User)">
+            <summary>
+            the update method of the API
+            </summary>
         </member>
         <member name="M:Api_Web.Controllers.WeatherForecastController.Get">
             <summary>

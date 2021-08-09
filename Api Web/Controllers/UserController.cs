@@ -40,6 +40,14 @@ namespace Api_Web.Controllers
             var result = await _iUser.CreateUser(userToAdd);
             return Ok(result);
         }
-
+        /// <summary>
+        /// the update method of the API
+        /// </summary>
+        [HttpPut("update")]
+        public async Task<IActionResult> Update(User updateUser)
+        {
+            var result = await _iUser.updateUser(updateUser);
+            return Ok(updateUser);
+        }
     }
 }
