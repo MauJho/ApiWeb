@@ -47,7 +47,19 @@ namespace Api_Web.Controllers
         public async Task<IActionResult> Update(User updateUser)
         {
             var result = await _iUser.updateUser(updateUser);
-            return Ok(updateUser);
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// retrive the information of the selected User ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("get/{id}")]
+        public async Task<IActionResult> GetMember(int id)
+        {
+            var retrive = await _iUser.GetUser(id);
+            return Ok(retrive);
         }
     }
 }
