@@ -76,3 +76,5 @@ C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.xml
 C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.pdb
 C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.genruntimeconfig.cache
 C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.csprojAssemblyReference.cache
+C:\Users\Pacha\source\repos\Api Web\Api Web\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\Pacha\source\repos\Api Web\Api Web\bin\Debug\netcoreapp3.1\System.Web.Http.dll

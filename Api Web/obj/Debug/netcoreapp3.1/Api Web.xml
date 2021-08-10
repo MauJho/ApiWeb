@@ -39,6 +39,13 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Api_Web.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            Method to delete an entry
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Api_Web.Controllers.WeatherForecastController.Get">
             <summary>
             Get the 1 to 5 range of the Weather Forecast
