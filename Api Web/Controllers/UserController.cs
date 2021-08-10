@@ -72,5 +72,17 @@ namespace Api_Web.Controllers
             var result = await _iUser.DeleteUser(id);
             return Ok(result);
         }
+        
+        /// <summary>
+        /// get all the users from the database
+        /// </summary>
+        /// <param name="users"></param>
+        /// <returns></returns>
+        [HttpGet("getall")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            var result = await _iUser.GetAll();
+            return Ok(result);
+        }
     }
 }
