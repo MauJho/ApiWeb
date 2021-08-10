@@ -46,6 +46,13 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Api_Web.Controllers.UserController.GetAllUsers">
+            <summary>
+            get all the users from the database
+            </summary>
+            <param name="users"></param>
+            <returns></returns>
+        </member>
         <member name="M:Api_Web.Controllers.WeatherForecastController.Get">
             <summary>
             Get the 1 to 5 range of the Weather Forecast
