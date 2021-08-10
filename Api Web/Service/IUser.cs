@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,5 +12,6 @@ namespace Api_Web.Service
         Task<User> updateUser(User userUpdate);
         Task<User> GetUser(int id);
         Task<List<User>> GetAll();
+        Task<User> DeleteUser(int id);
     }
 }

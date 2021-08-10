@@ -61,5 +61,16 @@ namespace Api_Web.Controllers
             var retrive = await _iUser.GetUser(id);
             return Ok(retrive);
         }
+        /// <summary>
+        /// Method to delete an entry
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            var result = await _iUser.DeleteUser(id);
+            return Ok(result);
+        }
     }
 }

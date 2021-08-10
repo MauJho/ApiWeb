@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace Api_Web.Service
 {
@@ -34,6 +36,18 @@ namespace Api_Web.Service
             if (result > 0)
                 return userToAdd;
 
+            return null;
+        }
+
+        public async Task<User> DeleteUser(int id)
+        {
+            var user = await GetUser(id);
+            if (user != null)
+            {
+                _dataContext.Users.Remove(user);
+                await _dataContext.SaveChangesAsync();
+                return user;
+            }
             return null;
         }
 
