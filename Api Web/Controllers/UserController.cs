@@ -40,6 +40,26 @@ namespace Api_Web.Controllers
             var result = await _iUser.CreateUser(userToAdd);
             return Ok(result);
         }
+        /// <summary>
+        /// the update method of the API
+        /// </summary>
+        [HttpPut("update")]
+        public async Task<IActionResult> Update(User updateUser)
+        {
+            var result = await _iUser.updateUser(updateUser);
+            return Ok(result);
+        }
 
+        /// <summary>
+        /// retrive the information of the selected User ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetMember(int id)
+        {
+            var retrive = await _iUser.GetUser(id);
+            return Ok(retrive);
+        }
     }
 }
