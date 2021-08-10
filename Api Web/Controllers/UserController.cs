@@ -55,7 +55,7 @@ namespace Api_Web.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("get/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetMember(int id)
         {
             var retrive = await _iUser.GetUser(id);
