@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Api_Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210805002705_DateOfBirthAdded")]
-    partial class DateOfBirthAdded
+    [Migration("20210820025506_HyreetDB")]
+    partial class HyreetDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,27 @@ namespace Api_Web.Migrations
                 .HasAnnotation("ProductVersion", "3.1.17")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Api_Web.Models.Departments", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Department")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Division")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Workstream")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Departments");
+                });
 
             modelBuilder.Entity("Api_Web.User", b =>
                 {
@@ -30,6 +51,9 @@ namespace Api_Web.Migrations
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("DepartmentsId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -43,7 +67,16 @@ namespace Api_Web.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DepartmentsId");
+
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Api_Web.User", b =>
+                {
+                    b.HasOne("Api_Web.Models.Departments", "Departments")
+                        .WithMany("Users")
+                        .HasForeignKey("DepartmentsId");
                 });
 #pragma warning restore 612, 618
         }

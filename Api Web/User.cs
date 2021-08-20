@@ -19,13 +19,9 @@ namespace Api_Web
 
         public string Email { get; set; }
 
-        public int EmployeeId { get; set; }
-
         public DateTime DateOfBirth { get; set; }
 
         //foreing key for Departments
-        public int DepartmentEmployeeId { get; set; }
-
-        public Department Departments { get; set; }
+        public Departments Departments { get; set; }
     }
 }

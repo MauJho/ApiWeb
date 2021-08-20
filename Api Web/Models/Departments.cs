@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Api_Web.Models
 {
-    public class Department
+    public class Departments
     {
-        [Key]
-        public int DepartmentEmployeeId { get; set; }
-        public string Departments{ get; set; }
-        public string Division{ get; set; }
+        public int Id { get; set; }
+        public string Department{ get; set; }
+        public string Division{ get; set; } 
         public string Workstream { get; set; }
         public ICollection<User> Users { get; set; }
 

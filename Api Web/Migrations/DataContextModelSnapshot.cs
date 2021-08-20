@@ -19,14 +19,14 @@ namespace Api_Web.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Api_Web.Models.Department", b =>
+            modelBuilder.Entity("Api_Web.Models.Departments", b =>
                 {
-                    b.Property<int>("DepartmentEmployeeId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Departments")
+                    b.Property<string>("Department")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Division")
@@ -35,7 +35,7 @@ namespace Api_Web.Migrations
                     b.Property<string>("Workstream")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("DepartmentEmployeeId");
+                    b.HasKey("Id");
 
                     b.ToTable("Departments");
                 });
@@ -50,17 +50,11 @@ namespace Api_Web.Migrations
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DepartmentEmployeeId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("DepartmentsDepartmentEmployeeId")
+                    b.Property<int?>("DepartmentsId")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
@@ -71,16 +65,16 @@ namespace Api_Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DepartmentsDepartmentEmployeeId");
+                    b.HasIndex("DepartmentsId");
 
                     b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Api_Web.User", b =>
                 {
-                    b.HasOne("Api_Web.Models.Department", "Departments")
+                    b.HasOne("Api_Web.Models.Departments", "Departments")
                         .WithMany("Users")
-                        .HasForeignKey("DepartmentsDepartmentEmployeeId");
+                        .HasForeignKey("DepartmentsId");
                 });
 #pragma warning restore 612, 618
         }
