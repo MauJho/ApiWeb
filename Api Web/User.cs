@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Api_Web.Models;
 
 namespace Api_Web
 {
@@ -19,5 +20,8 @@ namespace Api_Web
         public string Email { get; set; }
 
         public DateTime DateOfBirth { get; set; }
+
+        //foreing key for Departments
+        public Departments Departments { get; set; }
     }
 }
