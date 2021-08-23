@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Api_Web.Migrations
 {
-    public partial class HyreetDB : Migration
+    public partial class DataContext : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

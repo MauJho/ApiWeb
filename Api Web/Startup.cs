@@ -62,6 +62,8 @@ namespace Api_Web
                 });
 
                 services.AddScoped<IUser, UserRepo>();
+
+                services.AddScoped<IDepartment, DepartmentsRepo>();
                 // Add cors
                 services.AddCors();
 

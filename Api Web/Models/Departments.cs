@@ -12,7 +12,8 @@ namespace Api_Web.Models
         public string Department{ get; set; }
         public string Division{ get; set; } 
         public string Workstream { get; set; }
-        public ICollection<User> Users { get; set; }
+
+        //public ICollection<User> Users { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using Api_Web.Service;
+﻿using Api_Web.Models;
+using Api_Web.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

@@ -6,14 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20210820013021_HyreetDB.cs" />
-    <Compile Remove="Migrations\20210820013021_HyreetDB.Designer.cs" />
-    <Compile Remove="Migrations\20210820013234_HyreetDB.cs" />
-    <Compile Remove="Migrations\20210820013234_HyreetDB.Designer.cs" />
-    <Compile Remove="Migrations\20210820014204_HyreetDB.cs" />
-    <Compile Remove="Migrations\20210820014204_HyreetDB.Designer.cs" />
-    <Compile Remove="Migrations\20210820014821_HyreetDB.cs" />
-    <Compile Remove="Migrations\20210820014821_HyreetDB.Designer.cs" />
+    <Compile Remove="Migrations\20210823030621_HyreetDB.cs" />
+    <Compile Remove="Migrations\20210823030621_HyreetDB.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,7 +32,6 @@
 
   <ItemGroup>
     <Folder Include="Dtos\" />
-    <Folder Include="Migrations\" />
     <Folder Include="Seed.Core\" />
   </ItemGroup>
 

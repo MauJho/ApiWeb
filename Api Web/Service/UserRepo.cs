@@ -1,4 +1,5 @@
 ﻿using Api_Web.Data;
+using Api_Web.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -66,6 +67,7 @@ namespace Api_Web.Service
         public async Task<User> updateUser(User userUpdate)
         {
             _dataContext.Update(userUpdate);
+
             await _dataContext.SaveChangesAsync();
 
             return userUpdate;
