@@ -40,14 +40,45 @@ namespace Api_Web.Controllers
         public async Task<IActionResult> GetDepartment(int id)
         {
             var retrive = await _iDepartment.GetDepartment(id);
-            return Ok(retrive);
+            if(retrive != null)
+            {
+                return Ok(retrive);
+            }
+            else
+            {
+                return NotFound("Department not Found");
+            }
+            return BadRequest("please enter a valid department ID.");
         }
-
+        /// <summary>
+        /// Update the selected department
+        /// </summary>
+        /// <param name="departmentToUpdate"></param>
+        /// <returns></returns>
         [HttpPut("update")]
         public async Task<IActionResult> UpdateUserDepartment(Departments departmentToUpdate)
         {
             var result = await _iDepartment.UpdateDepartment(departmentToUpdate);
             return Ok(result);
+        }
+
+        /// <summary>
+        /// Find the department on the database and delete it
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteDepartment(int id)
+        {
+            var result = await _iDepartment.DeleteDepartment(id);
+            if (result == null)
+            {
+                return BadRequest("Department has users assign");
+            }
+            else
+            {
+                return Ok(result);
+            }
         }
     }
 }

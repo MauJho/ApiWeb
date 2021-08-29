@@ -18,6 +18,20 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Api_Web.Controllers.DepartmentsController.UpdateUserDepartment(Api_Web.Models.Departments)">
+            <summary>
+            Update the selected department
+            </summary>
+            <param name="departmentToUpdate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api_Web.Controllers.DepartmentsController.DeleteDepartment(System.Int32)">
+            <summary>
+            Find the department on the database and delete it
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:Api_Web.Controllers.UserController">
             <summary>
             The controller is a reserved word 

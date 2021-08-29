@@ -48,7 +48,15 @@ namespace Api_Web.Controllers
         public async Task<IActionResult> Update(User updateUser)
         {
             var result = await _iUser.updateUser(updateUser);
-            return Ok(result);
+            if (result == null)
+            {
+                return NotFound("User is not in the database");
+            }
+            else
+            {
+                return Ok(result);
+            }
+            return BadRequest("Information entered is not valid.");
         }
 
         /// <summary>

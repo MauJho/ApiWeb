@@ -1,10 +1,12 @@
 ﻿using Api_Web.Data;
+using Api_Web.Exceptions;
 using Api_Web.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
@@ -31,10 +33,17 @@ namespace Api_Web.Service
         }
 
         public async Task<Departments> GetDepartment(int id)
-        {
-            Departments departmentId = await _dataContext.Departments.Where(department => department.Id == id).FirstOrDefaultAsync();
-            return departmentId;
-        }
+            {
+            
+                    Departments departmentId = await _dataContext.Departments.Where(department => department.Id == id).FirstOrDefaultAsync();
+
+                    if (departmentId != null)
+                    {
+                        return departmentId;
+                    } 
+
+                      return null;
+            }
 
         public async Task<Departments> UpdateDepartment(Departments departmentToUpdate)
         {
@@ -44,5 +53,22 @@ namespace Api_Web.Service
 
             return departmentToUpdate;
         }
+
+        public async Task<Departments> DeleteDepartment(int id)
+        {
+            var users =  _dataContext.Users.Any(u => u.DepartmentsId == id);
+            if (!users)
+            {
+                var dep = await GetDepartment(id);
+                _dataContext.Departments.Remove(dep);
+                await _dataContext.SaveChangesAsync();
+                return dep;
+            }
+            else
+            {
+                return null;
+            }
+        }
+         
     }
 }

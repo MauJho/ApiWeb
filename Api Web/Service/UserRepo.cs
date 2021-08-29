@@ -54,23 +54,40 @@ namespace Api_Web.Service
 
         public async Task<List<User>> GetAll()
         {
-            List<User> users = await _dataContext.Users.ToListAsync();
+            List<User> users = await _dataContext.Users
+                .Include(d =>d.Departments)
+                .ToListAsync();
+           
             return users;
         }
 
         public async Task<User> GetUser(int id)
         {
-            User userId = await _dataContext.Users.Where(user => user.Id == id).FirstOrDefaultAsync();
+            User userId = await _dataContext.Users.Where(user => user.Id == id)
+                .Include(d => d.Departments)
+                .FirstOrDefaultAsync();
             return userId;
         }
 
         public async Task<User> updateUser(User userUpdate)
         {
-            _dataContext.Update(userUpdate);
+            var user = await GetUser(userUpdate.Id);
 
-            await _dataContext.SaveChangesAsync();
+            if (user != null)
+            {
+                user.LastName = userUpdate.LastName;
+                user.Name = userUpdate.Name;
+                user.Email = userUpdate.Email;
+                user.DepartmentsId = userUpdate.DepartmentsId;
 
-            return userUpdate;
+                await _dataContext.SaveChangesAsync();
+
+                return userUpdate;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
