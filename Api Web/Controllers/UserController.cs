@@ -1,4 +1,5 @@
-﻿using Api_Web.Service;
+﻿using Api_Web.Models;
+using Api_Web.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -47,7 +48,15 @@ namespace Api_Web.Controllers
         public async Task<IActionResult> Update(User updateUser)
         {
             var result = await _iUser.updateUser(updateUser);
-            return Ok(result);
+            if (result == null)
+            {
+                return NotFound("User is not in the database");
+            }
+            else
+            {
+                return Ok(result);
+            }
+            return BadRequest("Information entered is not valid.");
         }
 
         /// <summary>

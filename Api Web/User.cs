@@ -23,5 +23,7 @@ namespace Api_Web
 
         //foreing key for Departments
         public Departments Departments { get; set; }
+
+        public int DepartmentsId{ get; set; }
     }
 }

@@ -63,6 +63,7 @@ C:\Users\Pacha\source\repos\Api Web\Api Web\bin\Debug\netcoreapp3.1\runtimes\win
 C:\Users\Pacha\source\repos\Api Web\Api Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Pacha\source\repos\Api Web\Api Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Pacha\source\repos\Api Web\Api Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.csprojAssemblyReference.cache
 C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.AssemblyInfoInputs.cache
 C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.AssemblyInfo.cs
 C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.csproj.CoreCompileInputs.cache
@@ -77,4 +78,3 @@ C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.dll
 C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.xml
 C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.pdb
 C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.genruntimeconfig.cache
-C:\Users\Pacha\source\repos\Api Web\Api Web\obj\Debug\netcoreapp3.1\Api Web.csprojAssemblyReference.cache

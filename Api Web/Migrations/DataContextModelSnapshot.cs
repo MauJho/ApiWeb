@@ -73,7 +73,7 @@ namespace Api_Web.Migrations
             modelBuilder.Entity("Api_Web.User", b =>
                 {
                     b.HasOne("Api_Web.Models.Departments", "Departments")
-                        .WithMany("Users")
+                        .WithMany()
                         .HasForeignKey("DepartmentsId");
                 });
 #pragma warning restore 612, 618

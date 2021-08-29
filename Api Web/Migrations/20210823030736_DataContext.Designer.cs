@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Api_Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210820025506_HyreetDB")]
-    partial class HyreetDB
+    [Migration("20210823030736_DataContext")]
+    partial class DataContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -75,7 +75,7 @@ namespace Api_Web.Migrations
             modelBuilder.Entity("Api_Web.User", b =>
                 {
                     b.HasOne("Api_Web.Models.Departments", "Departments")
-                        .WithMany("Users")
+                        .WithMany()
                         .HasForeignKey("DepartmentsId");
                 });
 #pragma warning restore 612, 618
