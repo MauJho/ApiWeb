@@ -80,5 +80,16 @@ namespace Api_Web.Controllers
                 return Ok(result);
             }
         }
+
+        /// <summary>
+        /// Get the information from the all departments in the database
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("getall")]
+        public async Task<IActionResult> GetAllDepartments()
+        {
+            var result = await _iDepartment.GetAllDepartments();
+            return Ok(result);
+        }
     }
 }

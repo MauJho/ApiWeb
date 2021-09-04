@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Api_Web.Models;
 
-namespace Api_Web
+namespace Api_Web.Models
 {
     public class User
     {
@@ -25,5 +25,10 @@ namespace Api_Web
         public Departments Departments { get; set; }
 
         public int DepartmentsId{ get; set; }
+
+        //Foreing Key for rol
+        public UserRol UserRoles { get; set; }
+
+        public int UserRolesId { get; set; }
     }
 }

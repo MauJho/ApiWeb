@@ -69,6 +69,11 @@ namespace Api_Web.Service
                 return null;
             }
         }
-         
+
+        public async Task<List<Departments>> GetAllDepartments()
+        {
+            List<Departments> listOfDepartments = await _dataContext.Departments.ToListAsync();
+            return listOfDepartments;
+        }
     }
 }

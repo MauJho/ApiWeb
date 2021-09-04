@@ -15,5 +15,7 @@ namespace Api_Web.Service
         Task<Departments> UpdateDepartment(Departments departmentToUpdate);
 
         Task<Departments> DeleteDepartment(int id);
+
+        Task<List<Departments>> GetAllDepartments();
     }
 }

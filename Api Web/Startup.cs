@@ -64,6 +64,8 @@ namespace Api_Web
                 services.AddScoped<IUser, UserRepo>();
 
                 services.AddScoped<IDepartment, DepartmentsRepo>();
+
+                
                 // Add cors
                 services.AddCors();
 
@@ -84,7 +86,7 @@ namespace Api_Web
                 });
             // Instantiate the DataContext
             services.AddDbContext<DataContext>
-                (x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                (x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), m => m.MigrationsAssembly("Api_Web")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

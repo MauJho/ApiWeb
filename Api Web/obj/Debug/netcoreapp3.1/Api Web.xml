@@ -32,6 +32,12 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Api_Web.Controllers.DepartmentsController.GetAllDepartments">
+            <summary>
+            Get the information from the all departments in the database
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Api_Web.Controllers.UserController">
             <summary>
             The controller is a reserved word 
@@ -48,14 +54,14 @@
             </summary>
             <param name="iUser"></param>
         </member>
-        <member name="M:Api_Web.Controllers.UserController.Create(Api_Web.User)">
+        <member name="M:Api_Web.Controllers.UserController.Create(Api_Web.Models.User)">
             <summary>
             Post Method
             </summary>
             <param name="userToAdd"></param>
             <returns></returns>
         </member>
-        <member name="M:Api_Web.Controllers.UserController.Update(Api_Web.User)">
+        <member name="M:Api_Web.Controllers.UserController.Update(Api_Web.Models.User)">
             <summary>
             the update method of the API
             </summary>
@@ -94,7 +100,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Api_Web.Controllers.WeatherForecastController.Create(Api_Web.User)">
+        <member name="M:Api_Web.Controllers.WeatherForecastController.Create(Api_Web.Models.User)">
              <summary>
              Creates a TodoItem.
              </summary>
@@ -120,7 +126,7 @@
             </summary>
             <param name="dataContext"></param>
         </member>
-        <member name="M:Api_Web.Service.UserRepo.CreateUser(Api_Web.User)">
+        <member name="M:Api_Web.Service.UserRepo.CreateUser(Api_Web.Models.User)">
             <summary>
             This method create a new User
             </summary>
