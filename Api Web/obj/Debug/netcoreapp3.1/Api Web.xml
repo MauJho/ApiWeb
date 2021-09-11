@@ -38,6 +38,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Api_Web.Controllers.RoleController.AddRole(Api_Web.Models.UserRole)">
+            <summary>
+            Add a Role to the User
+            </summary>
+            <param name="addRole"></param>
+            <returns></returns>
+        </member>
         <member name="T:Api_Web.Controllers.UserController">
             <summary>
             The controller is a reserved word 

@@ -27,7 +27,7 @@ namespace Api_Web.Models
         public int DepartmentsId{ get; set; }
 
         //Foreing Key for rol
-        public UserRol UserRoles { get; set; }
+        public UserRole UserRoles { get; set; }
 
         public int UserRolesId { get; set; }
     }
