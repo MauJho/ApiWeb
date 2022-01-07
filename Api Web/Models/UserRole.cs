@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 
 namespace Api_Web.Models
 {
-    public class UserRol
+    public class UserRole
     {
         public int Id { get; set; }
 
-        public string RollName{ get; set; }
+        public string RoleName{ get; set; }
+
     }
+
 }

@@ -15,6 +15,6 @@ namespace Api_Web.Data
         
         public DbSet<Departments> Departments { get; set; }
 
-        public DbSet<UserRol> UserRol { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
     }
 }
