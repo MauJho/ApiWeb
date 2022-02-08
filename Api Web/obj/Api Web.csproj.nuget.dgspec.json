@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pacha\\source\\repos\\Api Web\\Api Web\\Api Web.csproj": {}
+    "C:\\Users\\A8Q2HZZ\\OneDrive - 3M\\Desktop\\ApiWeb Clone\\ApiWeb\\Api Web\\Api Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pacha\\source\\repos\\Api Web\\Api Web\\Api Web.csproj": {
+    "C:\\Users\\A8Q2HZZ\\OneDrive - 3M\\Desktop\\ApiWeb Clone\\ApiWeb\\Api Web\\Api Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pacha\\source\\repos\\Api Web\\Api Web\\Api Web.csproj",
+        "projectUniqueName": "C:\\Users\\A8Q2HZZ\\OneDrive - 3M\\Desktop\\ApiWeb Clone\\ApiWeb\\Api Web\\Api Web.csproj",
         "projectName": "Api Web",
-        "projectPath": "C:\\Users\\Pacha\\source\\repos\\Api Web\\Api Web\\Api Web.csproj",
-        "packagesPath": "C:\\Users\\Pacha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pacha\\source\\repos\\Api Web\\Api Web\\obj\\",
+        "projectPath": "C:\\Users\\A8Q2HZZ\\OneDrive - 3M\\Desktop\\ApiWeb Clone\\ApiWeb\\Api Web\\Api Web.csproj",
+        "packagesPath": "C:\\Users\\A8Q2HZZ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A8Q2HZZ\\OneDrive - 3M\\Desktop\\ApiWeb Clone\\ApiWeb\\Api Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Pacha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\A8Q2HZZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -112,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
