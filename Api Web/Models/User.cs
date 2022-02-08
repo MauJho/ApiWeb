@@ -5,30 +5,33 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Api_Web.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Api_Web.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        public int Id{ get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string name { get; set; }
 
-        public string LastName { get; set; }
+        public string lastName { get; set; }
 
-        public string Email { get; set; }
+        public string email { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public DateTime dateOfBirth { get; set; }
+
+        public string userName { get; set; }
 
         //foreing key for Departments
-        public Departments Departments { get; set; }
+        public Departments departments { get; set; }
 
-        public int DepartmentsId{ get; set; }
+        public int departmentsId { get; set; }
 
         //Foreing Key for rol
-        public UserRole UserRoles { get; set; }
+        public UserRole userRoles { get; set; }
 
-        public int UserRolesId { get; set; }
+        public int userRolesId { get; set; }
     }
 }
